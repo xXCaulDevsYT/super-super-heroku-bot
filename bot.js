@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '-bothelp') {
-    	message.reply('**BTK Help:** -> ');
+    	message.reply('**BTK Help:** -> `-botprefix` `-botinfo` `-subnazir`! ');
   	}
 });
 
