@@ -6,8 +6,26 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+    if (message.content === '-bothelp') {
+    	message.reply('**BTK Help:** -> ');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === '-botprefix') {
+    	message.reply('Prefix For BTK Clan Is: ( - )');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === '-botinfo') {
+    	message.reply('Creator: xXCaulDevsYT#7314 , http://youtube.com/emeraldassasinplayz');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === '-subnazir') {
+    	message.reply('https://www.youtube.com/channel/UCUOjDEjAJAEYLVMpUrMxlIQ');
   	}
 });
 
