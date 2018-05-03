@@ -52,7 +52,6 @@ client.on('message', message => {
 	}
 
 	if (command === "jokes") {
-		
 		message.channel.send(jokes[jokeoutput]);
 	}
 
