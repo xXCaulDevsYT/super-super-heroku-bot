@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+    if (message.content === 'info') {
+    	message.reply('btk clan bot made by @xXCaulDevsYT#7314');
   	}
 });
 
