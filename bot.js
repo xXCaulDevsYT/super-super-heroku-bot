@@ -19,7 +19,6 @@ client.on('ready', () => {
 	console.log("Username : " + client.user.username);
 	console.log("Prefix   : " + prefix});
 
-
 client.on("guildMemberAdd", member => {
 	let WelcomeChannel = member.guild.channels.find("name", WelcomeChannelName);
 	let embed = new Discord.RichEmbed()
@@ -46,12 +45,12 @@ client.on('message', message => {
 		let embed = new Discord.RichEmbed()
 		.setTitle("Bot Help")
 		.setColor("FFFFFF")
-		.addField("-bothelp", Shows a list of commands)
-		.addField("-jokes", tells Jokes)
-		.addField("-botprefix", lists the bot's prefix)
-		.addField("-botinfo", bots info)
-		.addField("-subnazir", Nazirs YT link!)
-		.addField("More Commands", Under Construction!)
+		.addField("-bothelp", "Shows a list of commands")
+		.addField("-jokes", "tells Jokes")
+		.addField("-botprefix", "lists the bot's prefix")
+		.addField("-botinfo", "bots info")
+		.addField("-subnazir", "Nazirs YT link!")
+		.addField("More Commands", "Under Construction"!)
 	    .addField("Developer YT Link", "http://youtube.com/emeraldassasinplayz");
 		message.channel.send(embed);
 	}
