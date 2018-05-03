@@ -17,8 +17,7 @@ let jokeoutput = Math.floor(Math.random() * jokes.length);
 
 client.on('ready', () => {
 	console.log("Username : " + client.user.username);
-	console.log("Prefix   : " + prefix);
-});
+	console.log("Prefix   : " + prefix});
 
 
 client.on("guildMemberAdd", member => {
@@ -44,7 +43,17 @@ client.on('message', message => {
 	let cmd = messageArray[0];
 
 	if (command === "bothelp") {
-		message.channel.send("**BTK Help:** -> `-botprefix` `-botinfo` `-subnazir`! ");
+		let embed = new Discord.RichEmbed()
+		.setTitle("Bot Help")
+		.setColor("FFFFFF")
+		.addField("-bothelp", Shows a list of commands)
+		.addField("-jokes", tells Jokes)
+		.addField("-botprefix", lists the bot's prefix)
+		.addField("-botinfo", bots info)
+		.addField("-subnazir", Nazirs YT link!)
+		.addField("More Commands", Under Construction!)
+	    .addField("Developer YT Link", "http://youtube.com/emeraldassasinplayz");
+		message.channel.send(embed);
 	}
 
     if (command === "botprefix") {
@@ -80,11 +89,6 @@ client.on('message', message => {
 	}
 });
 
-client.on('message', message => {
-    if (message.content === 'Why did Nazir cross the road?') {
-    	message.reply('To Win A Game Of Rules Of Survival!');
-  	}
-});
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
 
