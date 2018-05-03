@@ -29,5 +29,16 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === 'Why did Nazir cross the road?') {
+    	message.reply('To Win A Game Of Rules Of Survival!');
+  	}
+});
+client.on('message', message => {
+    if (message.content === '-jokes') {
+    	message.reply('**Why did Nazir cross the road?** ');
+  	}
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
