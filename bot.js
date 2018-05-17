@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+    if (message.content === '-botinfo') {
+    	message.reply('bot made and developed by Caulfergi / ZarkysMC');
   	}
 });
 
